@@ -1,0 +1,101 @@
+HKCR
+{
+	BeSweet.Addin.vc7.1 = s 'BeSweet DotNet Addin'
+	{
+		CLSID = s '{5EEA1EDA-4D17-42F4-A9BA-63657FAF60CA}'
+	}
+	BeSweet.Addin.vc7 = s 'BeSweet DotNet Addin'
+	{
+		CLSID = s '{5EEA1EDA-4D17-42F4-A9BA-63657FAF60CA}'
+		CurVer = s 'BeSweet.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove '{5EEA1EDA-4D17-42F4-A9BA-63657FAF60CA}' = s 'BeSweet DotNet Addin'
+		{
+			ProgID = s 'BeSweet.1'
+			VersionIndependentProgID = s 'BeSweet.Addin.vc7'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{DBAA9264-5569-4AF1-9FE1-2214BCC43271}'
+		}
+	}
+}
+
+
+
+HKLM
+{
+	NoRemove Software
+	{
+		NoRemove Microsoft
+		{
+			NoRemove VisualStudio
+			{
+             NoRemove 7.0
+             {
+						NoRemove Addins
+						{
+							'BeSweet.Addin.vc7'
+							{
+								val CommandLineSafe = d '0'
+								val CommandPreload = d '1'
+								val Description = s 'BeSweet - A set of visual source code browsers'
+								val LoadBehavior = d '1'
+								val FriendlyName = s 'BeSweet'
+								val SatelliteDllName = s '%MODULE%'
+							}
+						}						
+             }
+             
+             NoRemove 7.1
+             {
+						NoRemove Addins
+						{
+							'BeSweet.Addin.vc7'
+							{
+								val CommandLineSafe = d '0'
+								val CommandPreload = d '1'
+								val Description = s 'BeSweet - A set of visual source code browsers'
+								val LoadBehavior = d '1'
+								val FriendlyName = s 'BeSweet'
+								val SatelliteDllName = s '%MODULE%'
+							}
+						}						
+             }
+			}
+		}
+	}
+}
+
+
+HKCU
+{
+    NoRemove Software
+    {
+        NoRemove Microsoft
+        {
+            NoRemove VisualStudio
+            {
+                NoRemove 7.0
+                {							
+                    NoRemove PreloadAddinState
+                    {
+                        val BeSweet.Addin.vc7 = d '1'
+                    }
+                }
+                
+                NoRemove 7.1
+                {							
+                    NoRemove PreloadAddinState
+                    {
+                        val BeSweet.Addin.vc7 = d '1'
+                    }
+                }
+            }
+        }
+    }   
+}

@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{C0F2058E-F3A2-45A1-9A52-93D7E1D55D64} = s 'ESBServer'
+		'ESBServer.EXE'
+		{
+			val AppID = s {C0F2058E-F3A2-45A1-9A52-93D7E1D55D64}
+		}
+	}
+}

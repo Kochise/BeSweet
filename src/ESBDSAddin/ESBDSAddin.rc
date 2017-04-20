@@ -1,0 +1,221 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "src\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "src\\resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""bin\\ESBDSAddin.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,6,3,0
+ PRODUCTVERSION 0,6,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "BeSweet Visual Studio 6&7  Dual Addin\0"
+            VALUE "FileVersion", "0, 6, 3, 0\0"
+            VALUE "InternalName", "ESBDSAddin\0"
+            VALUE "LegalCopyright", "Copyright 2002 by ciderware\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "ESBDSAddin.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ESBDSAddin Module\0"
+            VALUE "ProductVersion", "0, 6, 3, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_ADDIN_VC6           REGISTRY DISCARDABLE    "res\\addin_vc6.rgs"
+IDR_COMMANDS_VC6        REGISTRY DISCARDABLE    "res\\commands_vc6.rgs"
+IDR_ADDIN_VC7           REGISTRY DISCARDABLE    "res\\addin_vc7.rgs"
+IDR_COMMANDS_VC7        REGISTRY DISCARDABLE    "res\\commands_vc7.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR_LARGE       BITMAP  MOVEABLE PURE   "res\\TBarLrge.bmp"
+IDR_TOOLBAR_MEDIUM      BITMAP  MOVEABLE PURE   "res\\TBarMedm.bmp"
+IDB_OUTLINE             BITMAP  DISCARDABLE     "res\\outline.bmp"
+IDB_HIERARCHY           BITMAP  DISCARDABLE     "res\\hierarchy.bmp"
+IDB_WORKSPACE           BITMAP  DISCARDABLE     "res\\workspace.bmp"
+IDB_METHODS             BITMAP  DISCARDABLE     "res\\methods.bmp"
+IDB_TYPES               BITMAP  DISCARDABLE     "res\\types.bmp"
+IDB_PROPERTIES          BITMAP  DISCARDABLE     "res\\properties.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ESBADDIN_PREFERENCES DIALOG DISCARDABLE  0, 0, 222, 286
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Be Sweet Addin Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Error",IDC_LEVEL_ERROR,"Button",BS_AUTORADIOBUTTON | 
+                    BS_NOTIFY | WS_GROUP,15,230,31,10
+    CONTROL         "Warning",IDC_LEVEL_WARNING,"Button",BS_AUTORADIOBUTTON | 
+                    BS_NOTIFY,50,230,43,10
+    CONTROL         "Info",IDC_LEVEL_INFO,"Button",BS_AUTORADIOBUTTON | 
+                    BS_NOTIFY,97,230,28,10
+    CONTROL         "Debug",IDC_LEVEL_DEBUG,"Button",BS_AUTORADIOBUTTON,129,
+                    230,37,10
+    CONTROL         "Trace",IDC_LEVEL_TRACE,"Button",BS_AUTORADIOBUTTON,170,
+                    230,35,10
+    DEFPUSHBUTTON   "OK",IDOK,10,265,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,160,265,50,14
+    CONTROL         "Enable Be Sweet",IDC_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,145,82,10
+    PUSHBUTTON      "Reload Workspace",IDC_RELOAD,130,130,70,14
+    CONTROL         "Tree1",IDC_WORKSPACE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,10,15,200,90
+    GROUPBOX        "Logging",IDC_STATIC,10,195,200,59
+    LTEXT           "Workspace Information:",IDC_STATIC,10,5,185,8
+    COMBOBOX        IDC_AREA,15,208,80,60,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Silent (don't ask questions)",IDC_SILENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,120,100,15
+    GROUPBOX        "Addin",IDC_STATIC,10,110,200,80
+    EDITTEXT        IDC_ESBSERVER_EXE,15,165,115,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BROWSE,150,165,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ESBADDIN_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ESBADDIN_PREFERENCES DLGINIT
+BEGIN
+    IDC_AREA, 0x403, 6, 0
+0x6441, 0x6964, 0x006e, 
+    IDC_AREA, 0x403, 13, 0
+0x7645, 0x6e65, 0x4874, 0x6e61, 0x6c64, 0x7265, "\000" 
+    IDC_AREA, 0x403, 15, 0
+0x6f43, 0x6d6d, 0x6e61, 0x4864, 0x6e61, 0x6c64, 0x7265, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "ESBDSAddin"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "bin\ESBDSAddin.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

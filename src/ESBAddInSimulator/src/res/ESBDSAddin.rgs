@@ -1,0 +1,51 @@
+HKCU
+{
+  NoRemove Software
+  {
+    NoRemove Microsoft
+    {
+      NoRemove DevStudio
+      {
+        NoRemove '6.0'
+        {
+          NoRemove AddIns
+          {
+            ForceRemove 'BeSweet.DSAddin.1' = s '1'
+            {
+               val Description = s 'Finally some class browsers 4 VC++'
+               val DisplayName = s 'BeSweet'
+               val Filename    = s '%MODULE%'
+            }
+          }
+        }
+      }
+    }
+  }
+} 
+
+HKCR
+{
+	BeSweet.DSAddin.1 = s 'BeSweet add-in'
+	{
+		CLSID = s '{5EEA1EDA-4D17-42F4-A9BA-63657FAF60CA}'
+	}
+	BeSweet.DSAddin = s 'BeSweet add-in'
+	{
+		CLSID = s '{5EEA1EDA-4D17-42F4-A9BA-63657FAF60CA}'
+		CurVer = s 'BeSweet.DSAddin.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5EEA1EDA-4D17-42F4-A9BA-63657FAF60CA} = s 'BeSweet add-in'
+		{
+			ProgID = s 'BeSweet.DSAddin.1'
+			VersionIndependentProgID = s 'BeSweet.DSAddin'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{DBAA9264-5569-4AF1-9FE1-2214BCC43271}'
+		}
+	}
+}

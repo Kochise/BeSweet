@@ -1,0 +1,100 @@
+// ESBDSAddin.idl : IDL source for ESBDSAddin.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ESBDSAddin.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	///////////////////////////
+	[
+		object,
+		uuid(524A9255-A05C-4DBC-A5C8-F29483BFA3F4),
+		dual,
+		helpstring("IESBDSAddin Interface"),
+		pointer_default(unique)
+	]
+	interface IESBDSAddin : IDispatch
+	{
+		[id(1), helpstring("method gotoLine")]
+		HRESULT gotoLine([in] BSTR file, [in] long line);
+	};
+	
+	//////////////////////////////
+	[
+		object,
+		uuid(18B53036-6F47-4F97-8A40-FDA17971A6A4),
+		dual,
+		helpstring("ICommands Interface"),
+		pointer_default(unique)
+	]
+	interface ICommands : IDispatch
+	{
+		[id(1), helpstring("method setProperties")]
+		HRESULT setProperties();
+
+		[id(2), helpstring("method showOutlineBrowser")]
+		HRESULT showOutlineBrowser();
+
+		[id(3), helpstring("method showTypeBrowser")]
+		HRESULT showTypeBrowser();
+
+		[id(4), helpstring("method showMethodBrowser")]
+		HRESULT showMethodBrowser();
+
+		[id(5), helpstring("method showWorkspaceBrowser")]
+		HRESULT showWorkspaceBrowser();
+
+		[id(6), helpstring("method showHierarchyBrowser")]
+		HRESULT showHierarchyBrowser();
+	};
+
+[
+	uuid(DBAA9264-5569-4AF1-9FE1-2214BCC43271),
+	version(1.0),
+	helpstring("ESBDSAddin 1.0 Type Library")
+]
+library ESBDSADDINLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	importlib("devshl.dll");
+	importlib("ide\devdbg.pkg");
+
+	[
+		uuid(5EEA1EDA-4D17-42F4-A9BA-63657FAF60CA),
+		helpstring("BeSweet DSAddin")
+	]
+	coclass ESBDSAddin
+	{
+		[default] interface IESBDSAddin;
+	};
+
+	//////////////////////
+	[
+		uuid(B67FD143-30F5-4C1C-84CC-64CBE1AB350F),
+		helpstring("Commands Class")
+	]
+	coclass Commands
+	{
+		[default] interface ICommands;
+	};
+
+    /////////////////
+	[ hidden, uuid(97618E7E-F082-4BBD-84CC-CB467290753A) ]
+	coclass ApplicationEvents
+	{
+		[default] interface IApplicationEvents;
+	}
+
+	///////////visual studio 7
+	[
+		uuid(C3B13A12-7754-4F33-936E-4651E8FD96BB),
+		helpstring("Connect Class")
+	]
+	coclass Connect
+	{
+		[default] interface IUnknown;
+	};
+
+};

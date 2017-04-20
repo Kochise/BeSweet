@@ -1,0 +1,75 @@
+
+	// ESBServer.idl : IDL source for ESBServer.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (ESBServer.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+import "ESBDSAddin.idl";
+	[
+		object,
+		uuid(05E470CC-BE7D-434E-9890-1226E9682FB9),
+		dual,
+		helpstring("IESBServer Interface"),
+		pointer_default(unique)
+	]
+	interface IESBServer : IDispatch
+	{
+		[id(1), helpstring("method fileContentChanged")]
+		HRESULT fileContentChanged(BSTR file);
+
+		[id(2), helpstring("method showFileOutline")]
+		HRESULT showFileOutline(BSTR file);
+
+		[id(3), helpstring("method loadWorkspace")]
+		HRESULT loadWorkspace(BSTR packages);
+
+		[id(4), helpstring("method showBrowser")]
+		HRESULT showBrowser(BSTR browser, BSTR what);
+	};
+	[
+		object,
+		uuid(9BC2C2AE-1571-411A-A6EF-6D926A538424),
+		dual,
+		helpstring("IESBServerManager Interface"),
+		pointer_default(unique)
+	]
+	interface IESBServerManager : IDispatch
+	{
+		[id(1), helpstring("method newWorkspaceServer")]
+		HRESULT newWorkspaceServer(BSTR name, IESBDSAddin *vs, IESBServer **srv);
+
+		[id(2), helpstring("method getWorkspaceServer")]
+		HRESULT getWorkspaceServer(BSTR name, IESBServer **srv);
+
+		[id(3), helpstring("method removeWorkspaceServer")]
+		HRESULT removeWorkspaceServer(BSTR name);
+	};
+[
+	uuid(64DEAE3F-D272-4ECC-97E6-CF363BA392B3),
+	version(1.0),
+	helpstring("ESBServer 1.0 Type Library")
+]
+library ESBServerLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	[
+		uuid(A40D669B-A4F9-4A10-B93F-D240B7A12B67),
+		helpstring("ESBServer Class")
+	]
+	coclass ESBServerCoClass
+	{
+		[default] interface IESBServer;
+	};
+	[
+		uuid(1F535CB1-E631-4317-A23B-9402B9D2A383),
+		helpstring("ESBServerManager Class")
+	]
+	coclass ESBServerManagerCoClass
+	{
+		[default] interface IESBServerManager;
+	};
+};
+
+	

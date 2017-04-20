@@ -1,0 +1,763 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ESBServer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_OUTLINE             ICON    DISCARDABLE     "res\\outline.ico"
+IDI_ESBSERVER_MANAGER   ICON    DISCARDABLE     "res\\esbserver.ico"
+IDI_WORKSPACE           ICON    DISCARDABLE     "res\\workspace.ico"
+IDI_TYPEBROWSER         ICON    DISCARDABLE     "res\\typebrowser.ico"
+IDI_HIERARCHY           ICON    DISCARDABLE     "res\\hierarchy.ico"
+IDI_PACKAGE_BROWSER     ICON    DISCARDABLE     "res\\package_browser.ico"
+IDI_LOG_WINDOW          ICON    DISCARDABLE     "res\\log_wind.ico"
+IDI_FILTER              ICON    DISCARDABLE     "res\\filter.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BeSweet"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Version",IDC_THIS_VERSION,40,35,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003 by ciderware",IDC_STATIC,40,85,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "Homepage",IDC_HOMEPAGE,100,10,40,8
+    LTEXT           "Latest version:",IDC_LATEST_VERSION,40,45,120,8
+    LTEXT           "Download latest version from",IDC_STATIC,40,55,92,8
+    LTEXT           "here",IDC_DOWNLOADPAGE,135,55,15,8
+    LTEXT           "Visit the BeSweet",IDC_STATIC,40,10,56,8
+END
+
+IDD_ESBSERVER_CONRTOL_PANEL DIALOGEX 0, 0, 132, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ESB Server Controller"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Destroy",IDOK,70,65,58,14
+    PUSHBUTTON      "Types",IDC_TYPE_BROWSER,5,5,58,14
+    PUSHBUTTON      "Outline",IDC_OUTLINE_BROWSER,70,5,58,14
+    LTEXT           "Static",IDC_MOUSE_POS,25,60,89,11,NOT WS_VISIBLE
+    PUSHBUTTON      "Workspace",IDC_WORKSPACE,5,45,58,14
+    PUSHBUTTON      "Methods",IDC_METHOD_BROWSER,5,25,58,14
+    PUSHBUTTON      "Preferences",IDC_PREFERENCES,5,65,58,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Hierarchy",IDC_HIERARCHY_BROWSER,70,25,58,14
+    PUSHBUTTON      "Packages",IDC_PACKAGES_BROWSER,70,45,58,14
+END
+
+IDD_SCOPEDNAME_BROWSER DIALOGEX 0, 0, 198, 270
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Open"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FILTER,7,18,184,14,ES_AUTOHSCROLL
+    CONTROL         "List2",IDC_TYPES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_AUTOARRANGE | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,45,184,121,WS_EX_CLIENTEDGE
+    CONTROL         "List1",IDC_QUALIFIERS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_AUTOARRANGE | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,182,184,58
+    PUSHBUTTON      "OK",IDC_CLOSE,85,249,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,141,249,50,14
+    LTEXT           "Choose ( ? = any character, * = any string)",IDC_CHOOSE,
+                    7,7,184,8
+    LTEXT           "Matches:",IDC_MATCHES,7,36,184,8
+    CONTROL         "Qualifiers:",IDC_QUALIFIER_LABEL,"Static",
+                    SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | WS_GROUP,7,170,184,
+                    11
+END
+
+IDD_EMPTY_DIALOG DIALOG DISCARDABLE  0, 0, 70, 38
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_ESBSERVER_OPTION_PANEL DIALOG DISCARDABLE  0, 0, 262, 250
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,137,223,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,206,222,50,14
+    EDITTEXT        IDC_CTAGGER,5,20,255,14,ES_AUTOHSCROLL
+    LTEXT           "CTagger",IDC_STATIC,5,5,250,8
+END
+
+IDD_CTAGS_PROPERTIES_PANEL DIALOG DISCARDABLE  0, 0, 207, 189
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "CTags"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_CTAGS_EXE,5,15,141,14,ES_AUTOHSCROLL
+    LTEXT           "CTags Executable:",IDC_STATIC,5,5,62,8
+    PUSHBUTTON      "Browse",IDC_BROWSE,150,15,50,14,BS_NOTIFY
+    LTEXT           "Additional CTags Options",IDC_STATIC,5,58,95,8
+    EDITTEXT        IDC_ADDITIONAL_CTAGS_OPTIONS,5,68,195,90,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_WANTRETURN
+    CONTROL         "Show ctags Window",IDC_SHOW_CTAGGER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,39,140,10
+END
+
+IDD_OUTLINE_BROWSER_PROPERTIES_PANEL DIALOG DISCARDABLE  0, 0, 210, 135
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Outline Browser"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Hover Time [ms]",IDC_STATIC,106,30,66,8
+    EDITTEXT        IDC_HOVER,106,40,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Show Header && Source file content",
+                    IDC_SHOW_HEADER_AND_SOURCE_FILE_CONETENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,102,137,10
+    CONTROL         "Show Namespaces",IDC_SHOW_NAMESPACES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,118,125,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,27,23,50,64
+    CONTROL         "",IDC_TOPLEFT,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT,
+                    23,20,8,8
+    CONTROL         "",IDC_BOTTOMRIGHT,"Button",BS_AUTORADIOBUTTON,73,82,16,
+                    8
+    CONTROL         "",IDC_TOPRIGHT,"Button",BS_AUTORADIOBUTTON,71,20,10,8
+    CONTROL         "",IDC_BOTTOMLEFT,"Button",BS_AUTORADIOBUTTON,23,83,9,10
+    GROUPBOX        "Screen",IDC_STATIC,7,7,95,88
+    LTEXT           "Browser",IDC_STATIC,39,47,26,8
+    LTEXT           "<---Measure Corner",IDC_STATIC,107,13,61,8
+END
+
+IDD_HIERARCHY_BROWSER_PANEL DIALOGEX 0, 0, 210, 436
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_HIERARCHY,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_INFOTIP | WS_BORDER | WS_TABSTOP,
+                    0,15,210,165,WS_EX_CLIENTEDGE
+    LTEXT           "Selected Type",IDC_OUTLINE_LABEL,25,191,42,8,
+                    SS_CENTERIMAGE
+    ICON            "",IDC_OUTLINE_ICON,1,183,20,20
+END
+
+IDD_PACKAGE_BROWSER_PANEL DIALOGEX 0, 0, 466, 150
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Package Browser"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_TYPES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,175,20,125,130
+    CONTROL         "List2",IDC_NAMESPACES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,0,20,135,130,WS_EX_CLIENTEDGE
+    CONTROL         "List3",IDC_MEMBERS1,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOLABELWRAP | 
+                    LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,340,20,125,130
+    CONTROL         "",IDC_SPLITTERBAR1,"Static",SS_ENHMETAFILE,145,5,5,145,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_SPLITTERBAR2,"Static",SS_ENHMETAFILE,315,5,5,145
+    GROUPBOX        "",IDC_NSPACE_CAPTION,0,0,135,20
+    GROUPBOX        "",IDC_MEMBERS_CAPTION,340,0,125,20
+    GROUPBOX        "",IDC_TYPES_CAPTION,175,0,125,20
+    CONTROL         219,IDC_STATIC,"Static",SS_BITMAP,5,5,11,10
+    CONTROL         220,IDC_STATIC,"Static",SS_BITMAP,180,5,11,10
+    CONTROL         221,IDC_STATIC,"Static",SS_BITMAP,345,5,11,10
+END
+
+IDD_APPEARANCE_PROPERTIES_PANEL DIALOG DISCARDABLE  0, 0, 187, 279
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Appearance"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Raise browser when mouse hoovers",IDC_AUTO_RAISE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,237,130,10
+    CONTROL         "Hide brosers if mouse leaves",IDC_HIDE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,253,106,10
+    CONTROL         "Show Return Types",IDC_SHOW_RETURN_TYPES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,15,101,10
+    CONTROL         "Return and double click closes tag browsers",
+                    IDC_CLOSE_ON_RETURN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,31,155,10
+    CONTROL         "Show Tooltips",IDC_SHOW_TOOLTIPS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,46,140,10
+    CONTROL         "Roll/Unroll Browsers on mouse enter/exit",IDC_ROLL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,151,145,10
+    CONTROL         "Stay allways on top",IDC_ALLWAYS_ONTOP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,206,77,10
+    EDITTEXT        IDC_ROLL_TIME,90,183,84,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_ROLL_WIDTH,91,162,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Rolled Size",IDC_STATIC,22,165,39,8
+    LTEXT           "Animation Time [ms]",IDC_STATIC,20,186,64,8
+    CONTROL         "Fade browsers on mouse enter/exit",IDC_FADE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,60,127,10
+    EDITTEXT        IDC_MIN_OPACITY,91,71,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MAX_OPACITY,148,71,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_FADE_TIME,91,91,84,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Opacity [%]",IDC_STATIC,22,74,36,8
+    LTEXT           "Max.",IDC_STATIC,129,73,16,8
+    LTEXT           "Animation Time [ms]",IDC_STATIC,21,94,64,8
+    GROUPBOX        "VS-Full-Screen Options",IDC_STATIC,7,141,173,80
+    GROUPBOX        "General Options",IDC_STATIC,7,5,173,130
+    GROUPBOX        "VS-None-Full-Screen Options",IDC_STATIC,7,227,173,45
+    EDITTEXT        IDC_ROLL_HEIGHT,148,162,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Width",IDC_STATIC,69,166,20,8
+    LTEXT           "Height",IDC_STATIC,124,165,22,8
+    LTEXT           "Min.",IDC_STATIC,74,74,14,8
+    EDITTEXT        IDC_ENLARGE,105,111,25,15,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Enlarge ""Mouse-In"" area by",IDC_STATIC,10,115,91,8
+    LTEXT           "pixels",IDC_STATIC,135,115,18,8
+END
+
+IDD_HIERARCHY_BROWSER_PROPERTIES_PANEL DIALOG DISCARDABLE  0, 0, 210, 135
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Hierarchy Browser"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Hover Time [ms]",IDC_STATIC,110,27,66,8
+    EDITTEXT        IDC_HOVER,109,37,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,27,23,50,64
+    CONTROL         "",IDC_TOPLEFT,"Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT,
+                    23,20,8,8
+    CONTROL         "",IDC_BOTTOMRIGHT,"Button",BS_AUTORADIOBUTTON,73,82,16,
+                    8
+    CONTROL         "",IDC_TOPRIGHT,"Button",BS_AUTORADIOBUTTON,71,20,10,8
+    CONTROL         "",IDC_BOTTOMLEFT,"Button",BS_AUTORADIOBUTTON,23,83,9,10
+    CONTROL         "Show Namespaces",IDC_SHOW_NAMESPACES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,119,125,10
+    CONTROL         "Warn about multiple parents",IDC_WARN_MULTIPLE_PARENTS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,102,104,10
+    GROUPBOX        "Screen",IDC_STATIC,7,7,95,88
+    LTEXT           "Browser",IDC_STATIC,39,47,26,8
+    LTEXT           "<---Measure Corner",IDC_STATIC,107,13,61,8
+END
+
+IDD_LOGGER_PANEL DIALOG DISCARDABLE  0, 0, 556, 262
+STYLE WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "BeSweet Log"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LOG_ENTRY_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,1,0,554,260
+END
+
+IDD_VERSION_CHECKING DIALOG DISCARDABLE  0, 0, 186, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Checking for new version"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Ok",IDOK,71,24,50,14,NOT WS_VISIBLE
+    CONTROL         "Don't check for newer versions",IDC_DISABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,28,114,10
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,7,7,172,14
+    LTEXT           "new version",IDC_PREFIX,30,7,39,8,NOT WS_VISIBLE
+    LTEXT           "0.6.2.1",IDC_LINK,70,7,23,8,NOT WS_VISIBLE
+    LTEXT           "ready to download",IDC_POSTFIX,96,7,59,8,NOT WS_VISIBLE
+END
+
+IDD_LOGGER_PROPERTIES_PANEL DIALOG DISCARDABLE  0, 0, 207, 66
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Logging"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_LOGLEVEL,7,18,66,73,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Log Level",IDC_STATIC,7,7,32,8
+END
+
+IDD_PROGRESS DIALOG DISCARDABLE  0, 0, 212, 29
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH,
+                    7,7,198,15
+END
+
+IDD_CUSTOM_OUTLINE_FILTER DIALOG DISCARDABLE  0, 0, 230, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Outline Filter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "public",IDC_TYPE_PUBLIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,40,35,10
+    CONTROL         "protect",IDC_TYPE_PROTECTED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,55,40,38,10
+    CONTROL         "private",IDC_TYPE_PRIVATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,93,40,37,10
+    CONTROL         "class",IDC_TYPE_CLASS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,56,39,10
+    CONTROL         "struct",IDC_TYPE_STRUCT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,55,56,34,10
+    CONTROL         "union",IDC_TYPE_UNION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,93,56,39,10
+    CONTROL         "enum",IDC_TYPE_ENUM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,133,56,36,10
+    CONTROL         "typedef",IDC_TYPE_TYPEDEF,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,171,56,39,10
+    CONTROL         "public",IDC_FIELD_PUBLIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,108,35,10
+    CONTROL         "protected",IDC_FIELD_PROTECTED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,52,108,46,10
+    CONTROL         "private",IDC_FIELD_PRIVATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,102,108,37,10
+    CONTROL         "const",IDC_FIELD_CONST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,144,108,33,10
+    CONTROL         "static",IDC_FIELD_STATIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,184,108,33,10
+    CONTROL         "public",IDC_METHOD_PUBLIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,166,35,10
+    CONTROL         "protected",IDC_METHOD_PROTECTED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,61,166,46,10
+    CONTROL         "private",IDC_METHOD_PRIVATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,166,37,10
+    CONTROL         "abstract",IDC_METHOD_ABSTRACT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,181,41,10
+    CONTROL         "virtual",IDC_METHOD_VIRTUAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,61,181,35,10
+    CONTROL         "const",IDC_METHOD_CONST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,181,33,10
+    CONTROL         "static",IDC_METHOD_STATIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,161,181,33,10
+    DEFPUSHBUTTON   "OK",IDOK,7,205,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,173,205,50,14
+    GROUPBOX        "Types",IDC_STATIC,7,7,216,63
+    GROUPBOX        "Fields",IDC_STATIC,7,76,216,50
+    GROUPBOX        "Methods",IDC_STATIC,7,136,216,60
+    EDITTEXT        IDC_TYPES,15,20,112,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FIELDS,15,86,110,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_METHODS,15,146,110,14,ES_AUTOHSCROLL
+    LTEXT           "(use * for any string)",IDC_STATIC,133,24,81,8
+    LTEXT           "(use * for any string)",IDC_STATIC,133,90,81,8
+    LTEXT           "(use * for any string)",IDC_STATIC,131,149,81,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,6,4,0
+ PRODUCTVERSION 0,6,4,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "http://esbrowsers.sourceforge.net\0"
+            VALUE "CompanyName", "ciderware\0"
+            VALUE "FileDescription", "ESBServer MFC Application\0"
+            VALUE "FileVersion", "0, 6, 4, 0\0"
+            VALUE "InternalName", "ESBServer\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002 by ciderware\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ESBServer.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "BeSweet\0"
+            VALUE "ProductVersion", "0, 6, 4, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_METHOD              BITMAP  DISCARDABLE     "res\\method256.bmp"
+IDB_FIELD               BITMAP  DISCARDABLE     "res\\field256.bmp"
+IDB_CLASS               BITMAP  DISCARDABLE     "res\\class256.bmp"
+IDB_PUBLIC              BITMAP  DISCARDABLE     "res\\public256.bmp"
+IDB_PROTECTED           BITMAP  DISCARDABLE     "res\\protected256.bmp"
+IDB_PRIVATE             BITMAP  DISCARDABLE     "res\\private256.bmp"
+IDB_STATIC              BITMAP  DISCARDABLE     "res\\static256.bmp"
+IDB_CONST               BITMAP  DISCARDABLE     "res\\const256.bmp"
+IDB_ABSTRACT            BITMAP  DISCARDABLE     "res\\abstract256.bmp"
+IDB_VIRTUAL             BITMAP  DISCARDABLE     "res\\virtual256.bmp"
+IDB_OVERWRITEN          BITMAP  DISCARDABLE     "res\\overwriten256.bmp"
+IDB_PRIVATE_FIELD       BITMAP  DISCARDABLE     "res\\private_field256.bmp"
+IDB_PROTECTED_FIELD     BITMAP  DISCARDABLE     "res\\protected_field256.bmp"
+IDB_PUBLIC_FIELD        BITMAP  DISCARDABLE     "res\\public_field256.bmp"
+IDB_NAMESPACE           BITMAP  DISCARDABLE     "res\\namespace256.bmp"
+IDB_STRUCT              BITMAP  DISCARDABLE     "res\\struct256.bmp"
+IDB_UNION               BITMAP  DISCARDABLE     "res\\union256.bmp"
+IDB_ENUM                BITMAP  DISCARDABLE     "res\\enum256.bmp"
+IDB_FUNCTION            BITMAP  DISCARDABLE     "res\\function256.bmp"
+IDB_TYPEDEF             BITMAP  DISCARDABLE     "res\\typedef256.bmp"
+IDB_OUTLINE             BITMAP  DISCARDABLE     "res\\outline256.bmp"
+IDB_PUBLIC_ONLY_A       BITMAP  DISCARDABLE     "res\\public_only_a256.bmp"
+IDB_CLOSE_A             BITMAP  DISCARDABLE     "res\\close_a256.bmp"
+IDB_NO_STATIC_A         BITMAP  DISCARDABLE     "res\\no_static_a256.bmp"
+IDB_NO_FIELDS_A         BITMAP  DISCARDABLE     "res\\no_fields_a256.bmp"
+IDB_SORT_A              BITMAP  DISCARDABLE     "res\\sort_a256.bmp"
+IDB_CLOSE_F             BITMAP  DISCARDABLE     "res\\close_f256.bmp"
+IDB_NO_FIELDS_F         BITMAP  DISCARDABLE     "res\\no_field_f256.bmp"
+IDB_PUBLIC_ONLY_F       BITMAP  DISCARDABLE     "res\\public_only__f256.bmp"
+IDB_NO_STATIC_F         BITMAP  DISCARDABLE     "res\\no_static_f256.bmp"
+IDB_SORT_F              BITMAP  DISCARDABLE     "res\\sort_f256.bmp"
+IDB_NO_FIELDS_S         BITMAP  DISCARDABLE     "res\\no_field_s256.bmp"
+IDB_PUBLIC_ONLY_S       BITMAP  DISCARDABLE     "res\\public__only_s256.bmp"
+IDB_NO_STATIC_S         BITMAP  DISCARDABLE     "res\\no_static_s256.bmp"
+IDB_SORT_S              BITMAP  DISCARDABLE     "res\\sort_s256.bmp"
+IDB_HEADERFILE          BITMAP  DISCARDABLE     "res\\headerfile256.bmp"
+IDB_SOURCEFILE          BITMAP  DISCARDABLE     "res\\sourcefile256.bmp"
+IDB_WORKSPACE           BITMAP  DISCARDABLE     "res\\workspace256.bmp"
+IDB_TYPE_HIERARCHY_F    BITMAP  DISCARDABLE     "res\\type_hierarchy_f256.bmp"
+IDB_SUBTYPE_HIERARCHY_F BITMAP  DISCARDABLE     "res\\subtype_hierarchy_f256.bmp"
+IDB_LOCK_HIERARCHY_F    BITMAP  DISCARDABLE     "res\\lock_hierarchy_f256.bmp"
+IDB_INHERITED_MEMBERS_F BITMAP  DISCARDABLE     "res\\inherited_members_f256.bmp"
+IDB_LOCK_HIERARCHY_A    BITMAP  DISCARDABLE     "res\\lock_hierarchy_a256.bmp"
+IDB_INHERITED_MEMBERS_A BITMAP  DISCARDABLE     "res\\inherited_members_a256.bmp"
+IDB_SUBTYPE_HIERARCHY_A BITMAP  DISCARDABLE     "res\\subtype_hierarchy_a256.bmp"
+IDB_TYPE_HIERARCHY_A    BITMAP  DISCARDABLE     "res\\type_hierarchy_a256.bmp"
+IDB_SUPERTYPE_HIERARCHY_A BITMAP  DISCARDABLE     "res\\supertype_hierarchy_a256.bmp"
+IDB_SUPERTYPE_HIERARCHY_F BITMAP  DISCARDABLE     "res\\supertype_hierarchy_f256.bmp"
+IDB_PUBLIC_METHOD       BITMAP  DISCARDABLE     "res\\public_method256.bmp"
+IDB_PROTECTED_METHOD    BITMAP  DISCARDABLE     "res\\protected_method256.bmp"
+IDB_PRIVATE_METHOD      BITMAP  DISCARDABLE     "res\\private_method256.bmp"
+IDB_VARIABLE            BITMAP  DISCARDABLE     "res\\variable256.bmp"
+IDB_PACKAGES_A          BITMAP  DISCARDABLE     "res\\packages_a256.bmp"
+IDB_MEMBERS_A           BITMAP  DISCARDABLE     "res\\members_a256.bmp"
+IDB_TYPES_A             BITMAP  DISCARDABLE     "res\\types_a256.bmp"
+IDB_QUESTIONMARK        BITMAP  DISCARDABLE     "res\\questionmark256.bmp"
+IDB_PROBLEM             BITMAP  DISCARDABLE     "res\\problem256.bmp"
+IDB_PREVIOUS_HIERARCHIES_A BITMAP  DISCARDABLE     "res\\previous_hierarchies_a256.bmp"
+IDB_PREVIOUS_HIERARCHIES_F BITMAP  DISCARDABLE     "res\\previous_hierarchies_f256.bmp"
+IDB_SELECTION_ARROW     BITMAP  DISCARDABLE     "res\\selection_arrow256.bmp"
+IDB_PROTOTYPE           BITMAP  DISCARDABLE     "res\\prototype256.bmp"
+IDB_FILTER_A            BITMAP  DISCARDABLE     "res\\filter_a256.bmp"
+IDB_FILTER_F            BITMAP  DISCARDABLE     "res\\filter_f256.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_OUTLINE_BROWSER_POPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "OutlineBrowser"
+    BEGIN
+        MENUITEM "Header",                      ID_OUTLINEBROWSER_HEADER
+        MENUITEM "Source",                      ID_OUTLINEBROWSER_SOURCE
+        MENUITEM SEPARATOR
+        MENUITEM "Hierarchy",                   ID_OUTLINEBROWSER_HIERARCHY
+        MENUITEM "Inspect",                     ID_OUTLINEBROWSER_INSPECT
+    END
+END
+
+IDR_ESBSERVER_POPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "ESB-Server"
+    BEGIN
+        MENUITEM "ESB-Server",                  ID_ESBSERVER_ESBSERVER
+        , INACTIVE
+        MENUITEM "Type Browser",                ID_ESBSERVER_TYPEBROWSER
+        , GRAYED
+        MENUITEM "Method Browser",              ID_ESBSERVER_METHODBROWSER
+        , GRAYED
+        MENUITEM "Workspace Browser",           ID_ESBSERVER_WORKSPACEBROWSER
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Reparse",                     ID_ESBSERVER_REPARSE, GRAYED
+        MENUITEM "Preferences",                 ID_ESBSERVER_PREFERENCES
+        MENUITEM "Log Window",                  ID_ESBSERVER_LOGWINDOW
+        MENUITEM SEPARATOR
+        MENUITEM "Show Control-Panel",          ID_ESBSERVER_MAXIMIZE
+        MENUITEM "Hide Control-Panel",          ID_ESBSERVER_MINIMIZE
+        MENUITEM SEPARATOR
+        MENUITEM "About",                       ID_ESBSERVER_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_ESBSERVER_EXIT
+    END
+END
+
+IDR_WORKSPACE_POPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Reparse"
+    BEGIN
+        MENUITEM "Outline",                     ID_REPARSE_OUTLINE
+    END
+END
+
+IDR_PREVIOUS_HIERARCHIES_POPUPMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Previous Hierarchies",        ID_PREVIOUSHIERARCHIES
+END
+
+IDR_HIERARCHY_BROWSER_POPUPMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Hierarchy"
+    BEGIN
+        MENUITEM "Focus on",                    ID_HIERARCHY_FOCUSON
+        MENUITEM "Focus on...",                 ID_HIERARCHY_FOCUSONX
+    END
+END
+
+IDR_CUSTOM_OUTLINE_FILTER MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Custom Filter",               65535
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_ESBSERVER_MANAGER   REGISTRY DISCARDABLE    "ESBServerMgr.rgs"
+IDR_ESBSERVER           REGISTRY DISCARDABLE    "ESBServer.rgs"
+IDR_ESBSERVERMANAGER    REGISTRY DISCARDABLE    "ESBServerManager.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ESBSERVER_CONRTOL_PANEL, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_CTAGS_PROPERTIES_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_OUTLINE_BROWSER_PROPERTIES_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_HIERARCHY_BROWSER_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 429
+    END
+
+    IDD_PACKAGE_BROWSER_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 459
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_APPEARANCE_PROPERTIES_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_HIERARCHY_BROWSER_PROPERTIES_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_LOGGER_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 549
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_VERSION_CHECKING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_LOGGER_PROPERTIES_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_CUSTOM_OUTLINE_FILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LOGGER_PROPERTIES_PANEL DLGINIT
+BEGIN
+    IDC_LOGLEVEL, 0x403, 6, 0
+0x7245, 0x6f72, 0x0072, 
+    IDC_LOGLEVEL, 0x403, 8, 0
+0x6157, 0x6e72, 0x6e69, 0x0067, 
+    IDC_LOGLEVEL, 0x403, 5, 0
+0x6e49, 0x6f66, "\000" 
+    IDC_LOGLEVEL, 0x403, 6, 0
+0x6544, 0x7562, 0x0067, 
+    IDC_LOGLEVEL, 0x403, 6, 0
+0x7254, 0x6361, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About ESBServer..."
+    IDS_BROWSERS            "Browsers"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ESBServer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

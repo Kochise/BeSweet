@@ -1,0 +1,24 @@
+HKCR
+{
+	ESBServer.ESBServerManager.1 = s 'ESBServerManager Class'
+	{
+		CLSID = s '{1F535CB1-E631-4317-A23B-9402B9D2A383}'
+	}
+	ESBServer.ESBServerManager = s 'ESBServerManager Class'
+	{
+		CLSID = s '{1F535CB1-E631-4317-A23B-9402B9D2A383}'
+		CurVer = s 'ESBServer.ESBServerManager.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1F535CB1-E631-4317-A23B-9402B9D2A383} = s 'ESBServerManager Class'
+		{
+			ProgID = s 'ESBServer.ESBServerManager.1'
+			VersionIndependentProgID = s 'ESBServer.ESBServerManager'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{C0F2058E-F3A2-45A1-9A52-93D7E1D55D64}'
+			'TypeLib' = s '{64DEAE3F-D272-4ECC-97E6-CF363BA392B3}'
+		}
+	}
+}

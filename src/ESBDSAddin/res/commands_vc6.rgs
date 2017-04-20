@@ -1,0 +1,26 @@
+HKCR
+{
+	BeSweet.CommandHandler.vc6.1 = s 'BeSweet Visual Studio v6 Toolbar'
+	{
+		CLSID = s '{B67FD143-30F5-4C1C-84CC-64CBE1AB350F}'
+	}
+	BeSweet.CommandHandler.vc6 = s 'BeSweet Visual Studio v6 Toolbar'
+	{
+		CLSID = s '{B67FD143-30F5-4C1C-84CC-64CBE1AB350F}'
+		CurVer = s 'BeSweet.CommandHandler.vc6.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B67FD143-30F5-4C1C-84CC-64CBE1AB350F} = s 'BeSweet Visual Studio v6 Toolbar'
+		{
+			ProgID = s 'BeSweet.CommandHandler.vc6.1'
+			VersionIndependentProgID = s 'BeSweet.CommandHandler.vc6'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{DBAA9264-5569-4AF1-9FE1-2214BCC43271}'
+		}
+	}
+}
